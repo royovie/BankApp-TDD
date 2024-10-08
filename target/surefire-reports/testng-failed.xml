@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Bank Test]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="listeners.CustomListeners"/>
+  </listeners>
+  <test thread-count="5" name="ManagerLogin(failed)" verbose="0">
+    <classes>
+      <class name="testcases.ManagerLogin">
+        <methods>
+          <include name="managerLogin"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testcases.ManagerLogin -->
+    </classes>
+  </test> <!-- ManagerLogin(failed) -->
+  <test thread-count="5" name="AddCustomerTest(failed)" verbose="0">
+    <classes>
+      <class name="testcases.AddCustomerTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="addCustomerTest" invocation-numbers="3"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testcases.AddCustomerTest -->
+    </classes>
+  </test> <!-- AddCustomerTest(failed) -->
+  <test thread-count="5" name="OpenAccountTest(failed)" verbose="0">
+    <classes>
+      <class name="testcases.OpenAccountTest">
+        <methods>
+          <include name="openAccountTest" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testcases.OpenAccountTest -->
+    </classes>
+  </test> <!-- OpenAccountTest(failed) -->
+</suite> <!-- Failed suite [Bank Test] -->
